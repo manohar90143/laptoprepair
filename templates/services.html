@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %}Services{% endblock %}
+
+{% block content %}
+<!-- AOS CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+<style>
+  .service-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+
+  .service-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #1a237e;
+  }
+
+  .service-list .card {
+    border: none;
+    border-radius: 16px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    background: white;
+  }
+
+  .service-list .card:hover {
+    transform: translateY(-8px);
+    background-color: #f0f9ff;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+    color: #007bff;
+  }
+</style>
+
+<div class="service-section" data-aos="fade-up">
+  <h2 class="service-title"><i class="bi bi-tools"></i> Our Services</h2>
+
+  <div class="row g-4 service-list">
+    <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+      <div class="card p-4 text-center">
+        <div class="service-icon mb-3"><i class="bi bi-laptop"></i></div>
+        <h5>Screen Replacement</h5>
+        <p>Broken or flickering screen? We replace it with genuine parts quickly.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card p-4 text-center">
+        <div class="service-icon mb-3"><i class="bi bi-battery-half"></i></div>
+        <h5>Battery Issues</h5>
+        <p>Get your battery replaced for longer life and better performance.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card p-4 text-center">
+        <div class="service-icon mb-3"><i class="bi bi-keyboard"></i></div>
+        <h5>Keyboard Repair</h5>
+        <p>Non-responsive keys? We fix or replace your keyboard with precision.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
+      <div class="card p-4 text-center">
+        <div class="service-icon mb-3"><i class="bi bi-cpu"></i></div>
+        <h5>Motherboard Fix</h5>
+        <p>From power issues to dead boards — we do chip-level servicing.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="400">
+      <div class="card p-4 text-center">
+        <div class="service-icon mb-3"><i class="bi bi-hdd-network"></i></div>
+        <h5>Software Installation</h5>
+        <p>OS upgrades, antivirus setup, driver fixes & more.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+{% endblock %}
